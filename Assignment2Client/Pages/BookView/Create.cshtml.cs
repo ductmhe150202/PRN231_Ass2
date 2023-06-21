@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using BusinessObjects;
 using Repositories;
 
-namespace Assignment2Client.Pages.BookView
+namespace Ass2Client.Pages.BookView
 {
     public class CreateModel : PageModel
     {
@@ -21,14 +21,14 @@ namespace Assignment2Client.Pages.BookView
 
         public IActionResult OnGet()
         {
-        ViewData["Publisher"] = new SelectList(_context.Publishers, "PubId", "PublisherName");
+            ViewData["Publisher"] = new SelectList(_context.Publishers, "PubId", "PublisherName");
             Book = new Book();
             return Page();
         }
 
         [BindProperty]
         public Book Book { get; set; } = default!;
-        
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

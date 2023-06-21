@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BusinessObjects;
 
-namespace Assignment2Client.Pages.BookView
+namespace Ass2Client.Pages.BookView
 {
     public class DeleteModel : PageModel
     {
-        private readonly BusinessObjects.EBookStoreContext _context;
+        private readonly EBookStoreContext _context;
 
-        public DeleteModel(BusinessObjects.EBookStoreContext context)
+        public DeleteModel(EBookStoreContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-      public Book Book { get; set; } = default!;
+        public Book Book { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -34,7 +34,7 @@ namespace Assignment2Client.Pages.BookView
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Book = book;
             }

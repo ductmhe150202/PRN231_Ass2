@@ -160,7 +160,7 @@ namespace BusinessObjects.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "EmailAddress", "FirstName", "HireDate", "LastName", "MiddleName", "Password", "PubId", "RoleId", "Source" },
-                values: new object[] { 1, "admin@ebookstore.com", "Admin", new DateTime(2023, 6, 19, 21, 21, 19, 49, DateTimeKind.Local).AddTicks(3308), "", "", "admin@@", 1, 1, "" });
+                values: new object[] { 1, "admin@ebookstore.com", "Admin", new DateTime(2023, 6, 21, 13, 15, 37, 493, DateTimeKind.Local).AddTicks(5219), "", "", "admin@@", 1, 1, "" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_BookAuthors_BookId",

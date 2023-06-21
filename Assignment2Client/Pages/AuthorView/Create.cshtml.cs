@@ -10,7 +10,7 @@ using AutoMapper;
 using BusinessObjects.DTO;
 using Repositories;
 
-namespace Assignment2Client.Pages.AuthorView
+namespace Ass2Client.Pages.AuthorView
 {
     public class CreateModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace Assignment2Client.Pages.AuthorView
         public CreateModel(EBookStoreContext context, IMapper mapper)
         {
             _context = context;
-            this.Mapper = mapper;
+            Mapper = mapper;
         }
 
         public IActionResult OnGet()

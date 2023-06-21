@@ -259,7 +259,7 @@ namespace BusinessObjects.Migrations
                             UserId = 1,
                             EmailAddress = "admin@ebookstore.com",
                             FirstName = "Admin",
-                            HireDate = new DateTime(2023, 6, 19, 21, 21, 19, 49, DateTimeKind.Local).AddTicks(3308),
+                            HireDate = new DateTime(2023, 6, 21, 13, 15, 37, 493, DateTimeKind.Local).AddTicks(5219),
                             LastName = "",
                             MiddleName = "",
                             Password = "admin@@",

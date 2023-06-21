@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BusinessObjects;
 
-namespace Assignment2Client.Pages.AuthorView
+namespace Ass2Client.Pages.AuthorView
 {
     public class DeleteModel : PageModel
     {
-        private readonly BusinessObjects.EBookStoreContext _context;
+        private readonly EBookStoreContext _context;
 
-        public DeleteModel(BusinessObjects.EBookStoreContext context)
+        public DeleteModel(EBookStoreContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-      public BusinessObjects.Author Author { get; set; } = default!;
+        public Author Author { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -34,7 +34,7 @@ namespace Assignment2Client.Pages.AuthorView
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Author = author;
             }

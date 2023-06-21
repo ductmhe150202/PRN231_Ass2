@@ -9,7 +9,7 @@ using BusinessObjects;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
-namespace Assignment2Client.Pages.PublisherView
+namespace Ass2Client.Pages.PublisherView
 {
     public class IndexModel : PageModel
     {
@@ -35,7 +35,7 @@ namespace Assignment2Client.Pages.PublisherView
             {
                 PropertyNameCaseInsensitive = true
             };
-            Publisher = (IList<Publisher>)JsonSerializer.Deserialize<List<Publisher>>(strData, options);
+            Publisher = JsonSerializer.Deserialize<List<Publisher>>(strData, options);
         }
 
         public async Task OnPostAsync()
@@ -48,7 +48,7 @@ namespace Assignment2Client.Pages.PublisherView
             {
                 PropertyNameCaseInsensitive = true
             };
-            Publisher = (IList<Publisher>)JsonSerializer.Deserialize<List<Publisher>>(strData, options);
+            Publisher = JsonSerializer.Deserialize<List<Publisher>>(strData, options);
         }
     }
 }

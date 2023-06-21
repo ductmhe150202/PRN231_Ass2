@@ -2,10 +2,10 @@
 using BusinessObjects;
 using BusinessObjects.DTO;
 
-namespace Assignment2API.Configurations
+namespace Ass2API.Configurations
 {
     public class MapperConfig : Profile
-    {        
+    {
         public MapperConfig()
         {
             CreateMap<User, UserDTO>();

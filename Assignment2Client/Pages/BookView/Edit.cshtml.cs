@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using BusinessObjects;
 using Repositories;
 
-namespace Assignment2Client.Pages.BookView
+namespace Ass2Client.Pages.BookView
 {
     public class EditModel : PageModel
     {
-        private readonly BusinessObjects.EBookStoreContext _context;
+        private readonly EBookStoreContext _context;
         IBookRepository repository = new BookRepository();
-        public EditModel(BusinessObjects.EBookStoreContext context)
+        public EditModel(EBookStoreContext context)
         {
             _context = context;
         }
@@ -30,7 +30,7 @@ namespace Assignment2Client.Pages.BookView
                 return NotFound();
             }
 
-            var book =  await _context.Books.FirstOrDefaultAsync(m => m.BookId == id);
+            var book = await _context.Books.FirstOrDefaultAsync(m => m.BookId == id);
             if (book == null)
             {
                 return NotFound();
@@ -65,7 +65,7 @@ namespace Assignment2Client.Pages.BookView
 
         private bool BookExists(int id)
         {
-          return (_context.Books?.Any(e => e.BookId == id)).GetValueOrDefault();
+            return (_context.Books?.Any(e => e.BookId == id)).GetValueOrDefault();
         }
     }
 }

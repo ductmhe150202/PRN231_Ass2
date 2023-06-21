@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using BusinessObjects;
 using Repositories;
 
-namespace Assignment2Client.Pages.PublisherView
+namespace Ass2Client.Pages.PublisherView
 {
     public class CreateModel : PageModel
     {
-        private readonly BusinessObjects.EBookStoreContext _context;
+        private readonly EBookStoreContext _context;
         IPublisherRepository repository = new PublisherRepository();
-        public CreateModel(BusinessObjects.EBookStoreContext context)
+        public CreateModel(EBookStoreContext context)
         {
             _context = context;
         }
@@ -31,7 +31,7 @@ namespace Assignment2Client.Pages.PublisherView
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
-        {    
+        {
             repository.SavePublisher(Publisher);
 
             return RedirectToPage("./Index");

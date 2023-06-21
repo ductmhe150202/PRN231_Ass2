@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using BusinessObjects;
 using Repositories;
 
-namespace Assignment2Client.Pages.AuthorView
+namespace Ass2Client.Pages.AuthorView
 {
     public class EditModel : PageModel
     {
@@ -30,7 +30,7 @@ namespace Assignment2Client.Pages.AuthorView
                 return NotFound();
             }
 
-            var author =  await _context.Authors.FirstOrDefaultAsync(m => m.AuthorId == id);
+            var author = await _context.Authors.FirstOrDefaultAsync(m => m.AuthorId == id);
             if (author == null)
             {
                 return NotFound();
@@ -64,7 +64,7 @@ namespace Assignment2Client.Pages.AuthorView
 
         private bool AuthorExists(int id)
         {
-          return (_context.Authors?.Any(e => e.AuthorId == id)).GetValueOrDefault();
+            return (_context.Authors?.Any(e => e.AuthorId == id)).GetValueOrDefault();
         }
     }
 }

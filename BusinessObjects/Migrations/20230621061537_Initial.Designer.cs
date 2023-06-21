@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusinessObjects.Migrations
 {
     [DbContext(typeof(EBookStoreContext))]
-    [Migration("20230619142119_Initial")]
+    [Migration("20230621061537_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -261,7 +261,7 @@ namespace BusinessObjects.Migrations
                             UserId = 1,
                             EmailAddress = "admin@ebookstore.com",
                             FirstName = "Admin",
-                            HireDate = new DateTime(2023, 6, 19, 21, 21, 19, 49, DateTimeKind.Local).AddTicks(3308),
+                            HireDate = new DateTime(2023, 6, 21, 13, 15, 37, 493, DateTimeKind.Local).AddTicks(5219),
                             LastName = "",
                             MiddleName = "",
                             Password = "admin@@",

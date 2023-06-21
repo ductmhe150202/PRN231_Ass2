@@ -9,7 +9,7 @@ using BusinessObjects;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
-namespace Assignment2Client.Pages.BookView
+namespace Ass2Client.Pages.BookView
 {
     public class IndexModel : PageModel
     {
@@ -35,7 +35,7 @@ namespace Assignment2Client.Pages.BookView
             {
                 PropertyNameCaseInsensitive = true
             };
-            Book = (IList<Book>)JsonSerializer.Deserialize<List<Book>>(strData, options);
+            Book = JsonSerializer.Deserialize<List<Book>>(strData, options);
         }
 
         public async Task OnPostAsync()
@@ -48,7 +48,7 @@ namespace Assignment2Client.Pages.BookView
             {
                 PropertyNameCaseInsensitive = true
             };
-            Book = (IList<Book>)JsonSerializer.Deserialize<List<Book>>(strData, options);
+            Book = JsonSerializer.Deserialize<List<Book>>(strData, options);
         }
     }
 }

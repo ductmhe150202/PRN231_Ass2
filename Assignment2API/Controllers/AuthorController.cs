@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Repositories;
 
-namespace Assignment2API.Controllers
+namespace Ass2API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -16,7 +16,7 @@ namespace Assignment2API.Controllers
         private IMapper Mapper { get; set; }
         public AuthorController(IMapper mapper)
         {
-            this.Mapper = mapper;
+            Mapper = mapper;
         }
 
         // GET: api/Authors

@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using BusinessObjects;
 using Repositories;
 
-namespace Assignment2Client.Pages.PublisherView
+namespace Ass2Client.Pages.PublisherView
 {
     public class EditModel : PageModel
     {
-        private readonly BusinessObjects.EBookStoreContext _context;
+        private readonly EBookStoreContext _context;
         IPublisherRepository repository = new PublisherRepository();
-        public EditModel(BusinessObjects.EBookStoreContext context)
+        public EditModel(EBookStoreContext context)
         {
             _context = context;
         }

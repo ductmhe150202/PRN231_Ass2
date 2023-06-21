@@ -7,18 +7,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BusinessObjects;
 
-namespace Assignment2Client.Pages.PublisherView
+namespace Ass2Client.Pages.PublisherView
 {
     public class DetailsModel : PageModel
     {
-        private readonly BusinessObjects.EBookStoreContext _context;
+        private readonly EBookStoreContext _context;
 
-        public DetailsModel(BusinessObjects.EBookStoreContext context)
+        public DetailsModel(EBookStoreContext context)
         {
             _context = context;
         }
 
-      public Publisher Publisher { get; set; } = default!; 
+        public Publisher Publisher { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -32,7 +32,7 @@ namespace Assignment2Client.Pages.PublisherView
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Publisher = publisher;
             }

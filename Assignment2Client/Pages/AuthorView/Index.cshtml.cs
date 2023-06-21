@@ -9,7 +9,7 @@ using BusinessObjects;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
-namespace Assignment2Client.Pages.AuthorView
+namespace Ass2Client.Pages.AuthorView
 {
     public class IndexModel : PageModel
     {
@@ -24,7 +24,7 @@ namespace Assignment2Client.Pages.AuthorView
             BaseUrl = "https://localhost:7276/api/Author";
         }
 
-        public IList<BusinessObjects.Author> Author { get; set; } = default!;
+        public IList<Author> Author { get; set; } = default!;
         public string searchtext = "";
 
         public async Task OnGetAsync()
@@ -35,7 +35,7 @@ namespace Assignment2Client.Pages.AuthorView
             {
                 PropertyNameCaseInsensitive = true
             };
-            Author = (IList<BusinessObjects.Author>)JsonSerializer.Deserialize<List<BusinessObjects.Author>>(strData, options);
+            Author = JsonSerializer.Deserialize<List<Author>>(strData, options);
         }
 
         public async Task OnPostAsync()
@@ -48,7 +48,7 @@ namespace Assignment2Client.Pages.AuthorView
             {
                 PropertyNameCaseInsensitive = true
             };
-            Author = (IList<BusinessObjects.Author>)JsonSerializer.Deserialize<List<BusinessObjects.Author>>(strData, options);
+            Author = JsonSerializer.Deserialize<List<Author>>(strData, options);
         }
     }
 }

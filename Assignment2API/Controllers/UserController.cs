@@ -9,7 +9,7 @@ using Repositories.Implements;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Assignment2API.Controllers
+namespace Ass2API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,7 +19,7 @@ namespace Assignment2API.Controllers
         private IMapper Mapper { get; set; }
         public UserController(IMapper mapper)
         {
-            this.Mapper = mapper;
+            Mapper = mapper;
         }
 
         // GET: api/Users
